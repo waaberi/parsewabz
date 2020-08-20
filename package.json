@@ -1,0 +1,30 @@
+{
+  "name": "parsewabz",
+  "version": "1.0.0",
+  "description": "A command parser, can be used for discord bots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wabz",
+  "license": "ISC",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "parsewabz"
+  },
+  "keywords": [
+    "command",
+    "parser",
+    "parser",
+    "bot",
+    "parser",
+    "discord",
+    "bot",
+    "bot",
+    "cmd",
+    "command"
+  ]
+}
