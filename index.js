@@ -55,22 +55,18 @@ class ParseWabz {
         }
       }
       if (curarg) {
-        console.log(curarg);
+        // console.log(curarg);
         try {
-          if (!input[i + 1]);
-          else if (!input[i + 1].startsWith("-")) {
+          if (!input[i + 1].startsWith("-")) {
             curargval += input[i + 1] + " ";
           } else {
             let itii = input[i + 1];
             //console.log("We have something that could be an arg: " + itii);
-            if (itii.startsWith("--") && this.args[itii.slice(2)]) {
-              //console.log("We found an argument: " + itii);
-              output[curarg] = curargval;
-              curarg = undefined;
-              curargval = "";
-            } else if (this.scanArgsForArg(itii.slice(1))[0]) {
-              //console.log("We found an alias argument:  " + itii);
-              output[curarg] = curargval;
+            if (
+              (itii.startsWith("--") && this.args[itii.slice(2)]) ||
+              this.scanArgsForArg(itii.slice(1))[0]
+            ) {
+              output[curarg] = curargval.trim();
               curarg = undefined;
               curargval = "";
             } else {
@@ -78,8 +74,8 @@ class ParseWabz {
             }
           }
         } catch (ex) {
-          console.error(ex);
-          output[curarg] = curargval;
+          //console.error(ex);
+          output[curarg] = curargval.trim();
           curarg = undefined;
           curargval = "";
         }
