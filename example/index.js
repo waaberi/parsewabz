@@ -29,7 +29,6 @@ function start() {
             user: ["u"],
             reason: ["r"],
             days: ["d"],
-            default: ["ddddd"],
           });
           console.log(cmdargs);
           console.log(
